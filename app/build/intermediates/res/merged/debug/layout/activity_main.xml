@@ -1,0 +1,150 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:paddingBottom="@dimen/activity_vertical_margin"
+    android:paddingLeft="@dimen/activity_horizontal_margin"
+    android:paddingRight="@dimen/activity_horizontal_margin"
+    android:paddingTop="@dimen/activity_vertical_margin"
+    tools:context="com.flaviocrispim.testeobd.MainActivity" >
+
+    <TextView
+        android:id="@+id/lblObdDevice"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/obd_device" />
+
+    <EditText
+        android:id="@+id/editObdDevice"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignStart="@+id/lblObdDevice"
+        android:layout_alignParentEnd="true"
+        android:layout_below="@+id/lblObdDevice"
+        android:inputType="text"
+        android:ems="10"
+        android:enabled="false">
+
+    </EditText>
+
+    <TextView
+        android:id="@+id/lblObdProtocol"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/editObdDevice"
+        android:text="@string/obd_protocol" />
+
+    <EditText
+        android:id="@+id/editObdProtocol"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignStart="@+id/lblObdProtocol"
+        android:layout_alignParentEnd="true"
+        android:layout_below="@+id/lblObdProtocol"
+        android:inputType="text"
+        android:ems="10"
+        android:enabled="false">
+
+    </EditText>
+
+    <TextView
+        android:id="@+id/lblVin"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/editObdProtocol"
+        android:text="@string/vin" />
+
+    <EditText
+        android:id="@+id/editVin"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignStart="@+id/lblVin"
+        android:layout_alignParentEnd="true"
+        android:layout_below="@+id/lblVin"
+        android:inputType="text"
+        android:ems="10"
+        android:enabled="false">
+
+    </EditText>
+
+    <TextView
+        android:id="@+id/lblDistanceSinceLastMilReset"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/editVin"
+        android:text="@string/distance_since_last_mil_reset" />
+
+    <EditText
+        android:id="@+id/editDistanceSinceLastMilReset"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignStart="@+id/lblDistanceSinceLastMilReset"
+        android:layout_alignParentEnd="true"
+        android:layout_below="@+id/lblDistanceSinceLastMilReset"
+        android:inputType="text"
+        android:ems="10"
+        android:enabled="false">
+
+    </EditText>
+
+    <TextView
+        android:id="@+id/lblFuelLevel"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/editDistanceSinceLastMilReset"
+        android:text="@string/fuel_level" />
+
+    <EditText
+        android:id="@+id/editFuelLevel"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignStart="@+id/lblFuelLevel"
+        android:layout_alignParentEnd="true"
+        android:layout_below="@+id/lblFuelLevel"
+        android:inputType="text"
+        android:ems="10"
+        android:enabled="false">
+
+    </EditText>
+
+    <TextView
+        android:id="@+id/lblPercAlcohol"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/editFuelLevel"
+        android:text="@string/perc_alcohol" />
+
+    <EditText
+        android:id="@+id/editPercAlcohol"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignStart="@+id/lblPercAlcohol"
+        android:layout_alignParentEnd="true"
+        android:layout_below="@+id/lblPercAlcohol"
+        android:inputType="text"
+        android:ems="10"
+        android:enabled="false">
+
+    </EditText>
+
+    <Button
+        android:id="@+id/btnConnectObd"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/obd_connect"
+        android:onClick="connectObd"
+        android:layout_alignParentBottom="true"
+        android:layout_alignParentStart="true"
+        />
+
+    <Button
+        android:id="@+id/btnDisconnectObd"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_alignParentEnd="true"
+        android:enabled="false"
+        android:onClick="disconnectObd"
+        android:text="@string/obd_disconnect" />
+
+</RelativeLayout>
