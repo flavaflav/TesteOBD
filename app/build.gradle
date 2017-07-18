@@ -26,6 +26,6 @@ dependencies {
     compile (
             ['com.android.support:support-v4:19.1.0'],
             //['com.github.pires:obd-java-api:1.0'],
-            files('D:\\projetos\\obd-java-api-new\\target\\obd-java-api-1.1-SNAPSHOT.jar')
+            files('D:\\projetos\\obd\\obd-java-api\\target\\obd-java-api-1.1-SNAPSHOT.jar')
     )
 }
